@@ -80,16 +80,25 @@ if( resultado_find != undefined){
     if(resultado_find.get_noches_disponibies()){
         
         let noches = prompt("Indique cantidad de noches a reservar");
-        resultado_find.update_noches_disponibles(noches);
-        
-        if(noches < 3){
 
+        if(noches < 3){
+            console.log("La estadía mínima debe ser de tres noches");
+        }
+        else{
+            resultado_find.update_noches_disponibles(noches);
+            console.log( resultado_find);
         }
     }
+    
     else{
         console.log("No hay noches disponibles para este establecimiento");
     }
+
+    }
+
+else{
+    console.log("Ingresaste un alojamiento inexistente");
 }
 
-console.log( resultado_find);
+
 
